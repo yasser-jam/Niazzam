@@ -1,7 +1,7 @@
 <template>
   <button
-    class="btn btn-primary text-white"
-    :class="link && 'btn-link text-gray-400 no-underline hover:no-underline'"
+    class="btn "
+    :class="`${(link && !active) ? 'btn-link' : 'btn-primary text-white'}`"
   >
   <Icon v-if="icon" :name="icon" size="1.75rem"></Icon>
     <slot />
@@ -17,6 +17,9 @@ defineProps({
   icon: {
     type: String,
     default: ''
+  },
+  active: {
+    type: Boolean
   }
 });
 </script>
