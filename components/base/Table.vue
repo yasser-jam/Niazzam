@@ -13,8 +13,7 @@
         </thead>
   
         <tbody>
-          <!-- row 1 -->
-          <tr>
+          <tr v-for="row in rows">
             <td>
               <div class="flex items-center gap-3">
                 <div class="avatar bg-primary p-2 rounded-full">
@@ -25,26 +24,26 @@
                   ></Icon>
                 </div>
                 <div>
-                  <div class="font-bold">Payment - 1</div>
+                  <div class="font-bold">{{ row.title }}</div>
                 </div>
               </div>
             </td>
   
             <td>
-              <div class="badge badge-success text-white p-4 text-lg rounded-lg">
-                  1/1/2003
+              <div class="badge badge-info text-white p-4 text-lg rounded-lg">
+                  {{ row.date }}
               </div>
             </td>
   
             <td>
-              <div class="badge badge-warning p-4 text-lg rounded-lg">
-                  Accessories
+              <div v-for="cat in row.categories" class="badge badge-warning p-4 text-lg rounded-lg">
+                  {{ cat.name }}
               </div>
             </td>
   
             <td>
-              <div class="p-4 text-primary text-2xl font-bold rounded-lg">
-                  100$
+              <div class="text-primary text-2xl font-bold rounded-lg">
+                  ${{ row.amount }}
               </div>
             </td>
           </tr>
@@ -55,9 +54,44 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   bulk: {
     type: Boolean,
   },
 });
+
+const rows = ref([
+  {
+    title: 'Units',
+    date: '1/1/2024',
+    categories: [
+      { name: 'Others' }
+    ],
+    amount: 100,
+  },
+  {
+    title: 'Units',
+    date: '1/1/2024',
+    categories: [
+      { name: 'Others' }
+    ],
+    amount: 100,
+  },
+  {
+    title: 'Units',
+    date: '1/1/2024',
+    categories: [
+      { name: 'Others' }
+    ],
+    amount: 100,
+  },
+  {
+    title: 'Units',
+    date: '1/1/2024',
+    categories: [
+      { name: 'Others' }
+    ],
+    amount: 100,
+  },
+])
 </script>
