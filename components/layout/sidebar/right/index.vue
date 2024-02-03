@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-span-3 min-h-screen bg-primary flex flex-col justify-around items-center px-8 py-8"
+    class="min-h-screen bg-primary flex flex-col justify-around items-center px-8 py-8"
   >
     <div
       class="flex flex-col justify-center items-center rounded-2xl border p-12"
