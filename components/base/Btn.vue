@@ -1,7 +1,7 @@
 <template>
   <button
     class="btn "
-    :class="`${(link && !active) ? 'btn-link' : 'btn-primary text-white'}`"
+    :class="`${(link && !active) ? 'btn-link' : `bg-${color} text-white`}`"
   >
   <Icon v-if="icon" :name="icon" size="1.75rem"></Icon>
     <slot />
@@ -20,6 +20,10 @@ defineProps({
   },
   active: {
     type: Boolean
+  },
+  color: {
+    type: String,
+    default: 'primary'
   }
 });
 </script>

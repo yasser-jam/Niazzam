@@ -27,7 +27,9 @@
 
     <div class="border rounded-3xl bg-white w-[200px] h-[200px] my-12"></div>
 
-    <div class="w-full">
+    <div class="w-full flex flex-col space-y-4">
+        <layout-sidebar-right-appointment-card active></layout-sidebar-right-appointment-card>
+        <layout-sidebar-right-appointment-card></layout-sidebar-right-appointment-card>
         <layout-sidebar-right-appointment-card></layout-sidebar-right-appointment-card>
     </div>
   </div>

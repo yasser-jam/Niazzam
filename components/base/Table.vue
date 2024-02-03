@@ -31,7 +31,7 @@
             </td>
   
             <td>
-              <div class="badge badge-primary p-4 text-lg rounded-lg">
+              <div class="badge badge-success text-white p-4 text-lg rounded-lg">
                   1/1/2003
               </div>
             </td>

@@ -9,7 +9,7 @@
     </div>
 
     <div class="dropdown dropdown-end">
-      <base-btn icon="heroicons:light-bulb"></base-btn>
+      <base-btn icon="heroicons:light-bulb" color="info"></base-btn>
       <ul
         tabindex="0"
         class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
