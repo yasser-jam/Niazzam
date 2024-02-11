@@ -30,13 +30,13 @@
             </td>
   
             <td>
-              <div class="badge badge-info text-white p-4 text-lg rounded-lg">
+              <div class="badge badge-primary text-white p-4 text-base rounded-lg">
                   {{ row.date }}
               </div>
             </td>
   
             <td>
-              <div v-for="cat in row.categories" class="badge badge-warning p-4 text-lg rounded-lg">
+              <div v-for="cat in row.categories" class="badge badge-warning p-4 text-base rounded-lg">
                   {{ cat.name }}
               </div>
             </td>
