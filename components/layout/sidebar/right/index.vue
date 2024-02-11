@@ -6,9 +6,13 @@
       class="flex flex-col justify-center items-center rounded-2xl border p-12"
     >
       <div
-        class="border flex items-center justify-center w-[150px] p-1 rounded-md mb-4"
+        class="border flex items-center justify-center w-[150px] p-1 rounded-md mb-4 relative"
       >
-        <div class="rounded-md bg-slate-200 w-full h-[150px]"></div>
+        <img src="~/assets/images/personal-avatar.jpg" alt="personal-avatar" />
+
+        <div
+          class="w-6 h-6 absolute top-2 right-2 rounded-full bg-green-500"
+        ></div>
       </div>
 
       <div class="mb-12 text-center">
@@ -28,9 +32,11 @@
     <div class="border rounded-3xl bg-white w-[200px] h-[200px] my-12"></div>
 
     <div class="w-full flex flex-col space-y-4">
-        <layout-sidebar-right-appointment-card active></layout-sidebar-right-appointment-card>
-        <layout-sidebar-right-appointment-card></layout-sidebar-right-appointment-card>
-        <layout-sidebar-right-appointment-card></layout-sidebar-right-appointment-card>
+      <layout-sidebar-right-appointment-card
+        active
+      ></layout-sidebar-right-appointment-card>
+      <layout-sidebar-right-appointment-card></layout-sidebar-right-appointment-card>
+      <layout-sidebar-right-appointment-card></layout-sidebar-right-appointment-card>
     </div>
   </div>
 </template>
