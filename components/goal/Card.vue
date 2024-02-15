@@ -1,5 +1,5 @@
 <template>
-    <div class="card shadow-md mx-auto bg-white rounded-xl relative w-[90%]">
+    <div class="card shadow-md mx-auto bg-white rounded-xl relative w-full">
         <div class="card-body mx-auto">
             <div class="radial-progress text-2xl" :style="`--value:${value};`" role="progressbar">{{ value }}%</div>
             <div class="font-semibold text-2xl mt-4">Reading</div>
