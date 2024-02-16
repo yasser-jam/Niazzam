@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#F6FAFF]">
+  <div class="min-h-screen bg-[#edf3ff]">
     <div class="grid grid-cols-12">
 
       <layout-sidebar-left class="col-span-1"></layout-sidebar-left>

@@ -58,7 +58,7 @@
       title: 'Study',
       currentState: 'term 2',
       description: 'term 2',
-      level: 4
+      level: 3
     },
   ])
   </script>
