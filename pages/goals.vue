@@ -11,8 +11,8 @@
         <goal-card class="text-info" :value="20"></goal-card>
       </div>
 
-      <div class="mt-8 w-full">
-        <goal-timeline></goal-timeline>
+      <div class="flex flex-col gap-4 mt-8 w-full">
+        <goal-row v-for="goal in goals" :goal="goal"></goal-row>
       </div>
   
       <div class="grid mt-8">
@@ -24,5 +24,41 @@
   </template>
   
   <script setup lang="ts">
-    
+  const goals = ref([
+    {
+      id: 1,
+      title: 'Reading',
+      currentState: 'Stage - 4',
+      description: 'Syrian Improvments',
+      level: 1
+    },
+    {
+      id: 2,
+      title: 'Algorithms Course',
+      currentState: 'Stage - 3',
+      description: 'Testing and Practicing',
+      level: 2
+    },
+    {
+      id: 3,
+      title: 'Memorizing',
+      currentState: 'Poem 4',
+      description: 'Ibn Zaidon',
+      level: 2
+    },
+    {
+      id: 4,
+      title: 'Documentries',
+      currentState: 'Docs 5',
+      description: 'Apucalips 5',
+      level: 3
+    },
+    {
+      id: 5,
+      title: 'Study',
+      currentState: 'term 2',
+      description: 'term 2',
+      level: 4
+    },
+  ])
   </script>

@@ -1,9 +1,9 @@
 <template>
   <button
-    class="btn "
-    :class="`${(link && !active) ? 'btn-link' : `bg-${color} text-white`}`"
+    class="btn"
+    :class="`${(link && !active) ? 'btn-link' : `bg-${color} text-white`} ${small ? 'btn-sm btn-square' :''}`"
   >
-  <Icon v-if="icon" :name="icon" size="1.75rem"></Icon>
+  <Icon v-if="icon" :name="icon" :size="`${small ? '1.25rem' : '1.75rem'}`"></Icon>
     <slot />
   </button>
 </template>
@@ -24,6 +24,9 @@ defineProps({
   color: {
     type: String,
     default: 'primary'
+  },
+  small: {
+    type: Boolean
   }
 });
 </script>
