@@ -6,7 +6,7 @@
 
       <div class="col-span-8 px-8 my-8">
         
-        <layout-header></layout-header>
+        <!-- <layout-header></layout-header> -->
 
         <main>
           <slot />

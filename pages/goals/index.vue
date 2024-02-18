@@ -2,7 +2,10 @@
   
     <div class="container">
         
-      <base-title class="mb-12 mt-8">Goals</base-title>
+      <div class="flex items-center justify-between mb-8">
+        <base-title>Goals</base-title>
+        <base-btn icon="heroicons:plus-16-solid" @click="$router.push('/goals/add')">Add Goal</base-btn>
+      </div>
       
       <div class="grid grid-cols-4 gap-x-8">
         <goal-card class="text-primary" :value="50"></goal-card>
@@ -19,6 +22,8 @@
           <!-- <payment-table></payment-table> -->
       </div>
     </div>
+
+    <NuxtChild />
   
   
   </template>

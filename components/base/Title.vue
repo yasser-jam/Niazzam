@@ -1,5 +1,5 @@
 <template>
     <div class="text-4xl font-bold text-primary">
-        Payments
+        <slot />
     </div>
 </template>
