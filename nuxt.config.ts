@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '~/assets/styles/main.scss'
   ],
 
-  modules: ['nuxt-icon-tw', '@nuxtjs/tailwindcss'],
+  modules: ['nuxt-icon-tw', '@nuxtjs/tailwindcss', 'daisy-ui-kit/nuxt'],
 
   postcss: {
     plugins: {
@@ -14,4 +14,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
+  daisy: {
+    prefix: 'Da'
+  }
 })

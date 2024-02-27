@@ -12,6 +12,7 @@
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.64",
     "autoprefixer": "^10.4.16",
+    "daisy-ui-kit": "^3.0.11",
     "nuxt": "^3.9.1",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",

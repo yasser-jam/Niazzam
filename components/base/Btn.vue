@@ -1,11 +1,7 @@
 <template>
-  <button
-    class="btn"
-    :class="`${(link && !active) ? 'btn-link' : `bg-${color} text-white`} ${small ? 'btn-sm btn-square' :''}`"
-  >
-  <Icon v-if="icon" :name="icon" :size="`${small ? '1.25rem' : '1.75rem'}`"></Icon>
-    <slot />
-  </button>
+  <da-button>
+    <Icon v-if="icon" class="text-2xl" :name="icon" />
+  </da-button>
 </template>
 
 <script setup>
@@ -16,17 +12,17 @@ defineProps({
   },
   icon: {
     type: String,
-    default: ''
+    default: "",
   },
   active: {
-    type: Boolean
+    type: Boolean,
   },
   color: {
     type: String,
-    default: 'primary'
+    default: "primary",
   },
   small: {
-    type: Boolean
-  }
+    type: Boolean,
+  },
 });
 </script>
