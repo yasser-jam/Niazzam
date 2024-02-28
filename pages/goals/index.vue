@@ -7,16 +7,20 @@
         <base-btn icon="heroicons:plus-16-solid" @click="$router.push('/goals/add')">Add Goal</base-btn>
       </div>
       
-      <div class="grid grid-cols-4 gap-x-8">
-        <goal-card class="text-primary" :value="50"></goal-card>
-        <goal-card class="text-warning" :value="25"></goal-card>
-        <goal-card class="text-error" :value="75"></goal-card>
-        <goal-card class="text-info" :value="20"></goal-card>
+      <div class="grid grid-cols-4 gap-8">
+        <goal-card color="primary" :value="50"></goal-card>
+        <goal-card color="warning" :value="25"></goal-card>
+        <goal-card color="error" :value="75"></goal-card>
+        <goal-card color="info" :value="20"></goal-card>
+        <goal-card color="info" :value="20"></goal-card>
+        <goal-card color="info" :value="20"></goal-card>
+        <goal-card color="info" :value="20"></goal-card>
+        <goal-card color="info" :value="20"></goal-card>
       </div>
 
-      <div class="flex flex-col gap-4 mt-8 w-full">
+      <!-- <div class="flex flex-col gap-4 mt-8 w-full">
         <goal-row v-for="goal in goals" :goal="goal"></goal-row>
-      </div>
+      </div> -->
   
       <div class="grid mt-8">
           <!-- <payment-table></payment-table> -->
