@@ -1,6 +1,7 @@
 <template>
   <da-button>
     <Icon v-if="icon" class="text-2xl" :name="icon" />
+    <slot />
   </da-button>
 </template>
 

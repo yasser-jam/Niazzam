@@ -8,14 +8,10 @@
       </div>
       
       <div class="grid grid-cols-4 gap-8">
-        <goal-card color="primary" :value="50"></goal-card>
-        <goal-card color="warning" :value="25"></goal-card>
-        <goal-card color="error" :value="75"></goal-card>
-        <goal-card color="info" :value="20"></goal-card>
-        <goal-card color="info" :value="20"></goal-card>
-        <goal-card color="info" :value="20"></goal-card>
-        <goal-card color="info" :value="20"></goal-card>
-        <goal-card color="info" :value="20"></goal-card>
+        <goal-card color="primary"  :value="50"></goal-card>
+        <goal-card color="info" :value="25"></goal-card>
+        <goal-card color="warning" :value="75"></goal-card>
+        <goal-card class="bg-error" type="" :value="15"></goal-card>
       </div>
 
       <!-- <div class="flex flex-col gap-4 mt-8 w-full">
@@ -70,4 +66,6 @@
       level: 3
     },
   ])
+
+  
   </script>
