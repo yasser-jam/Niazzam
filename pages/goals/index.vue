@@ -23,8 +23,7 @@
       </div>
     </div>
 
-    <NuxtChild />
-  
+    <nuxt-page></nuxt-page>
   
   </template>
   
