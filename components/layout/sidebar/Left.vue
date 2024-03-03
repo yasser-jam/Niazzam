@@ -1,22 +1,25 @@
 <template>
-  <div class="bg-white flex flex-col items-center justify-around h-screen">
-    <Icon
-      name="heroicons:academic-cap"
-      color="#3F00E7"
-      class="w-[50px] h-[50px]"
-    />
-
-    <div class="flex flex-col space-y-12">
-      <nuxt-link v-for="link in links" :to="link.link">
-        <base-btn
-          :primary="link.link == $route.name"
-          :link="link.link != $route.name"
-          :icon="link.icon"
-        ></base-btn>
-      </nuxt-link>
+  <div class="relative w-full">
+    <div class="bg-white flex flex-col items-center justify-around h-full fixed w-[7%]">
+      <Icon
+        name="heroicons:academic-cap"
+        color="#3F00E7"
+        class="w-[50px] h-[50px]"
+      />
+  
+      <div class="flex flex-col space-y-12">
+        <nuxt-link v-for="link in links" :to="link.link">
+          <base-btn
+            :primary="link.link == $route.name"
+            :link="link.link != $route.name"
+            :icon="link.icon"
+          ></base-btn>
+        </nuxt-link>
+      </div>
+  
+      <base-btn primary icon="heroicons:cog-6-tooth"></base-btn>
     </div>
 
-    <base-btn primary icon="heroicons:cog-6-tooth"></base-btn>
   </div>
 </template>
 

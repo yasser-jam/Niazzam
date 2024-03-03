@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen bg-[#edf3ff]">
-    <div class="grid grid-cols-12">
+  <div class="bg-[#edf3ff] overflow-auto">
+    <div class="grid grid-cols-12 overflow-auto">
 
       <layout-sidebar-left class="col-span-1"></layout-sidebar-left>
 
