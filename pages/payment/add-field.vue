@@ -13,6 +13,12 @@
                 <da-text-input bordered class="w-full"></da-text-input>
             </div>
 
+            <div class="mt-4">
+                <base-label>Icon</base-label>
+
+                <da-text-input bordered class="w-full"></da-text-input>
+            </div>
+
         </div>
 
     </template>

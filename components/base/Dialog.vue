@@ -3,17 +3,18 @@
   <button ref="trigger" class="btn" onclick="modal.showModal()">
     open modal
   </button>
-  <dialog id="modal" class="modal">
-    <div class="modal-box">
-      <h3 class="font-bold text-xl">
+  <dialog id="modal" class="modal overflow-hidden">
+    <div class="modal-box px-4">
+      
+      <h3 class="font-bold text-xl pb-2">
         <slot name="title" />
       </h3>
 
-      <p class="py-4">
+      <div class="py-4 overflow-auto">
         <slot name="body" />
-      </p>
+      </div>
 
-      <div class="modal-action">
+      <div class="modal-action justify-end pt-2">
         <form method="dialog">
           <!-- if there is a button in form, it will close the modal -->
           <div class="flex gap-x-2">
