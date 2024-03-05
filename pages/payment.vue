@@ -1,6 +1,6 @@
 <template>
   
-  <div class="container">fsffsjjkjjfdijjkgijadjkdijijgi9ijw9jfijgujjifjjgokkejujr
+  <div class="container">
       
     <base-title class="mb-12 mt-8">Payments</base-title>
     
