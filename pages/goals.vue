@@ -26,7 +26,7 @@
 
           <div class="text-2xl font-bold mb-4">Day Tasks</div>
 
-          <base-btn primary>Add Task</base-btn>
+          <base-btn primary @click="$router.push('/goals/add-task')">Add Task</base-btn>
           
         </div>
 
