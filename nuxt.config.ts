@@ -2,11 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  css: [
-    '~/assets/styles/main.scss'
-  ],
+  css: ["~/assets/styles/main.scss"],
 
-  modules: ['nuxt-icon-tw', '@nuxtjs/tailwindcss', 'daisy-ui-kit/nuxt'],
+  modules: [
+    "nuxt-icon-tw",
+    "@nuxtjs/tailwindcss",
+    "daisy-ui-kit/nuxt",
+    "@nuxtjs/supabase",
+  ],
 
   postcss: {
     plugins: {
@@ -15,7 +18,11 @@ export default defineNuxtConfig({
     },
   },
 
+  supabase: {
+    redirect: false,
+  },
+
   daisy: {
-    prefix: 'Da'
-  }
-})
+    prefix: "Da",
+  },
+});
