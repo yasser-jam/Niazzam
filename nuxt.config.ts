@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "daisy-ui-kit/nuxt",
     "@nuxtjs/supabase",
+    "@pinia/nuxt"
   ],
 
   postcss: {
@@ -25,4 +26,8 @@ export default defineNuxtConfig({
   daisy: {
     prefix: "Da",
   },
+
+  imports: {
+    dirs: ['~/types/index.ts']
+  }
 });

@@ -33,3 +33,16 @@
   <nuxt-page></nuxt-page>
 
 </template>
+
+<script setup lang="ts">
+
+const paymentStore = usePaymentStore()
+const paymentFieldStore = usePaymentFieldStore()
+
+const { payments } = storeToRefs(paymentStore)
+const { fields } = storeToRefs(paymentFieldStore)
+
+
+const { pending } = useLazyAsyncData(() => paymentStore.list())
+
+</script>

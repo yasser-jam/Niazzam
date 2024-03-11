@@ -1,5 +1,5 @@
 <template>
-  <base-dialog :model-value="true" @close="goBack">
+  <base-dialog :model-value="true" @close="goBack" @save="submit">
   
     <template #title>Add Payment field</template>
 
@@ -10,13 +10,13 @@
             <div class="">
                 <base-label>Title</base-label>
 
-                <da-text-input bordered class="w-full"></da-text-input>
+                <da-text-input v-model="field.title" bordered class="w-full"></da-text-input>
             </div>
 
             <div class="mt-4">
                 <base-label>Icon</base-label>
 
-                <da-text-input bordered class="w-full"></da-text-input>
+                <da-text-input v-model="field.icon" bordered class="w-full"></da-text-input>
             </div>
 
         </div>
@@ -27,11 +27,33 @@
 </template>
 
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
+import { usePaymentFieldStore } from '~/stores/payment_field';
+
+const paymentFieldStore = usePaymentFieldStore()
+
+const { field } = storeToRefs(paymentFieldStore)
 
 const router = useRouter()
 
+const loading = ref<boolean>(false)
+
+// reset
+paymentFieldStore.reset()
+
 const goBack = () => {
     router.push('/payment')
+}
+
+const submit = async () => {
+
+    loading.value = true
+
+    try {
+        await paymentFieldStore.create()
+    } finally {
+        loading.value = false
+    }
 }
 
 </script>
