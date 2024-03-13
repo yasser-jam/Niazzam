@@ -1,5 +1,6 @@
 <template>
     <div>
+        <base-chart></base-chart>
     </div>
 </template>
 
