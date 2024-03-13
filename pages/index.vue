@@ -1,6 +1,8 @@
 <template>
     <div>
-        <Icon name="uil:github" color="black" />
-        etst
     </div>
 </template>
+
+<script setup lang="ts">
+const test = ref('')
+</script>

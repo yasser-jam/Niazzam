@@ -29,7 +29,10 @@
         </div>
       </div>
   
-      <div class="border rounded-3xl bg-white w-[200px] h-[200px] my-12"></div>
+      <div class="rounded-3xl my-12">
+
+        <base-calendar></base-calendar>
+      </div>
   
       <div class="w-full flex flex-col space-y-4">
         <layout-sidebar-right-appointment-card
