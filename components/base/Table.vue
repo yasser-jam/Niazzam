@@ -5,46 +5,16 @@
         <!-- head -->
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Date</th>
-            <th>Type</th>
-            <th>Amount</th>
+            <th v-for="col in cols">
+              {{ col.title }}
+            </th>
           </tr>
         </thead>
-  
+
         <tbody>
           <tr v-for="row in rows">
-            <td>
-              <div class="flex items-center gap-3">
-                <div class="avatar bg-primary p-2 rounded-full">
-                  <Icon
-                    name="heroicons:academic-cap"
-                    class="text-white"
-                    size="1.75rem"
-                  ></Icon>
-                </div>
-                <div>
-                  <div class="font-bold">{{ row.title }}</div>
-                </div>
-              </div>
-            </td>
-  
-            <td>
-              <div class="badge badge-primary text-white p-4 text-base rounded-lg">
-                  {{ row.date }}
-              </div>
-            </td>
-  
-            <td>
-              <div v-for="cat in row.categories" class="badge badge-warning p-4 text-base rounded-lg">
-                  {{ cat.name }}
-              </div>
-            </td>
-  
-            <td>
-              <div class="text-primary text-2xl font-bold rounded-lg">
-                  ${{ row.amount }}
-              </div>
+            <td v-for="col in cols">
+              <slot :name="col.key" :item="row" />
             </td>
           </tr>
         </tbody>
@@ -54,44 +24,14 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  bulk: {
-    type: Boolean,
-  },
-});
-
-const rows = ref([
+const props = withDefaults(
+  defineProps<{
+    bulk: boolean
+    rows: any[]
+    cols: any[]
+  }>(),
   {
-    title: 'Units',
-    date: '1/1/2024',
-    categories: [
-      { name: 'Others' }
-    ],
-    amount: 100,
-  },
-  {
-    title: 'Units',
-    date: '1/1/2024',
-    categories: [
-      { name: 'Others' }
-    ],
-    amount: 100,
-  },
-  {
-    title: 'Units',
-    date: '1/1/2024',
-    categories: [
-      { name: 'Others' }
-    ],
-    amount: 100,
-  },
-  {
-    title: 'Units',
-    date: '1/1/2024',
-    categories: [
-      { name: 'Others' }
-    ],
-    amount: 100,
-  },
-])
+    bulk: false,
+  }
+);
 </script>

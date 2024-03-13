@@ -1,19 +1,19 @@
 <template>
-  <base-dialog :model-value="true" @close="goBack">
+  <base-dialog :model-value="true" @save="save" @close="goBack">
     <template #title>Add Payment Amount!</template>
 
     <template #body>
       <div class="gird grid-cols-1">
-        <div class="">
-          <base-label>Name</base-label>
+        <div>
+          <base-label>Title</base-label>
 
-          <da-text-input class="mt-2 w-full" bordered :options="fields"></da-text-input>
+          <da-text-input v-model="payment.title" class="mt-2 w-full" bordered></da-text-input>
         </div>
 
-        <div class="">
+        <div>
           <base-label>Category</base-label>
 
-          <base-select class="mt-2" :options="fields"></base-select>
+          <base-select v-model="payment.payment_filed" class="mt-2" :options="fields"></base-select>
         </div>
 
         <div class="mt-4">
@@ -36,10 +36,26 @@
 <script setup lang="ts">
 const router = useRouter();
 
-const payment = ref({
-  amount: 1000,
-  field: "child",
-});
+const paymentStore = usePaymentStore()
+const paymentFieldStore = usePaymentFieldStore()
+
+const { payment } = storeToRefs(paymentStore)
+const { fields } = storeToRefs(paymentFieldStore)
+
+useLazyAsyncData(() => paymentFieldStore.list())
+
+const loading = ref<boolean>(false)
+
+const save = async () => {
+
+  loading.value = true
+  
+  try {
+    await paymentStore.create()
+  } finally {
+    loading.value = false
+  }
+}
 
 const paymentsOptions = ref([
   {
@@ -73,29 +89,6 @@ const paymentsOptions = ref([
   {
     title: "Other",
     value: 0,
-  },
-]);
-
-const fields = ref([
-  {
-    label: "Transportation",
-    value: "transport",
-  },
-  {
-    label: "Units",
-    value: "units",
-  },
-  {
-    label: "College",
-    value: "college",
-  },
-  {
-    label: "Food",
-    value: "food",
-  },
-  {
-    label: "Others",
-    value: "others",
   },
 ]);
 

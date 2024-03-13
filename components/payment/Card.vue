@@ -9,11 +9,11 @@
 
                 <div class="flex flex-col items-center">
 
-                    <div class="text-xl font-bold mb-2">Units</div>
+                    <div class="text-xl font-bold mb-2">{{ field.title }}</div>
 
-                    <div class="text-4xl font-semibold mb-2">$110.000</div>
+                    <div class="text-4xl font-semibold mb-2">${{ field.amount }}</div>
 
-                    <div class="text-gray-400 text-sm font-semibold">Money on Units</div>
+                    <div class="text-gray-400 text-sm font-semibold">Money on {{ field.title }}</div>
                 </div>
 
             </div>
@@ -24,17 +24,17 @@
 
 
 <script setup lang="ts">
-const { type, value } = defineProps({
-    type: {
-        type: String,
-        default: 'primary'
-    },
-    value: {
-        type: Number,
-    }
+import type { PaymentField } from '~/types';
+
+const props = withDefaults(defineProps<{
+    type: string
+    value: number
+    field: PaymentField
+}>(), {
+    type: 'primary'
 })
 
-const colorClass = computed(() => `text-${type}`)
+const colorClass = computed(() => `text-${props.type}`)
 </script>
 
 <style scoped>

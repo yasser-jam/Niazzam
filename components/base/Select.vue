@@ -16,8 +16,8 @@
   </da-menu> -->
 
 
-  <select class="select select-bordered w-full">
-    <option selected v-for="option in options" @select="$emit('update:model-value', $event)">{{ option.label }}</option>
+  <select ref="selectEl" class="select select-bordered w-full" @change="selectOption">
+    <option selected v-for="option in options" :value="option.id">{{ option.title }}</option>
   </select>
 </template>
 
@@ -25,4 +25,12 @@
 const props = defineProps<{
   options: any[];
 }>();
+
+const selectEl = ref(null)
+
+const emit = defineEmits(['update:model-value'])
+
+const selectOption = () => {
+  emit('update:model-value', Number(selectEl.value?.value))
+}
 </script>

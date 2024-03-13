@@ -38,6 +38,11 @@ export const usePaymentFieldStore = defineStore('payment_field', () => {
             
             fields.value = data as PaymentField[]
 
+            fields.value = fields.value.map(el => ({
+                ...el,
+                amount: getAmount(Number(el.id))
+            }))
+
             return fields.value
 
         } catch (error) {
@@ -46,15 +51,15 @@ export const usePaymentFieldStore = defineStore('payment_field', () => {
         }
     }
 
-    const getAmount = async (id: number) => {
+    const getAmount = (id: number) => {
         let amount = 0
         payments.value.forEach((el: any) => {
-            if (el.field.id == id) {
+            if (el.field_id == id) {
                 amount += el.amount
             }
         })
-        console.log(amount);
-        field.value.amount
+
+        return  amount
     }
 
     const fieldData = computed(() => ({

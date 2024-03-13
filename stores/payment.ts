@@ -12,7 +12,7 @@ export const usePaymentStore = defineStore('payment', () => {
 
     const get = async (id: number) => {
         try {
-            const { data } = await supabase.from('payment').select().eq('id', id)
+            const { data } = await supabase.from('payment_amount').select().eq('id', id)
             
             // @ts-ignore
             payment.value = data
@@ -27,11 +27,32 @@ export const usePaymentStore = defineStore('payment', () => {
 
     const list = async () => {
         try {
-            const { data } = await supabase.from('payment').select('*')
+            const { data } = await supabase.from('payment_amount').select('*, payment_field(*)')
             
             payments.value = data as Payment[]
 
             return payments.value
+
+        } catch (error) {
+            console.log(error);
+            throw error
+        }
+    }
+
+    const paymentData = computed(() => ({
+        id: payment.value.id || undefined,
+        title: payment.value.title,
+        amount: payment.value.amount,
+        field_id: payment.value.payment_filed.id,
+    }))
+
+    const create = async () => {
+        try {
+            // @ts-ignore
+            const { data } = await supabase.from('payment_amount').insert(paymentData.value)
+            
+            // relist
+            await list()
 
         } catch (error) {
             console.log(error);
@@ -44,6 +65,7 @@ export const usePaymentStore = defineStore('payment', () => {
 
         get,
         list,
+        create,
 
         payment,
         payments
