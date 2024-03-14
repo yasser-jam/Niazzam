@@ -10,7 +10,7 @@
           ></Icon>
         </div>
         <div>
-          <div class="font-bold">{{ item.payment_field.title }}</div>
+          <div class="font-bold">{{ item.payment_field?.title }}</div>
         </div>
       </div>
     </template>
@@ -19,7 +19,7 @@
       <div
         class="badge badge-warning p-4 text-base rounded-lg"
       >
-        {{ item.payment_field.title }}
+        {{ item.payment_field?.title }}
       </div>
     </template>
 

@@ -13,8 +13,9 @@
       <base-subtitle>Outcomes</base-subtitle>
       <base-btn icon="heroicons:plus" primary @click="$router.push('/payment/add-field')">Add</base-btn>
     </div>
+    
     <div class="grid grid-cols-3 gap-x-8 mt-8">
-      <payment-card v-for="field in fields" :field="field" class="text-primary" :value="50"></payment-card>
+      <payment-card v-for="(field, index) in fields" :field="field" :value="50"></payment-card>
     </div>
 
 
@@ -43,5 +44,7 @@ const { fields } = storeToRefs(paymentFieldStore)
 
 const { pending } = useLazyAsyncData(() => paymentStore.list())
 const { pending: fieldsLoading } = useLazyAsyncData(() => paymentFieldStore.list())
+
+const colors = ref(['warning', 'primary', 'info', 'error'])
 
 </script>

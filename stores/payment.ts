@@ -43,7 +43,7 @@ export const usePaymentStore = defineStore('payment', () => {
         id: payment.value.id || undefined,
         title: payment.value.title,
         amount: payment.value.amount,
-        field_id: payment.value.payment_filed.id,
+        field_id: payment.value.payment_filed,
     }))
 
     const create = async () => {
