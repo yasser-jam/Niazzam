@@ -4,7 +4,7 @@
       
     <base-title class="mb-12 mt-8">Payments</base-title>
     
-    <div class="grid grid-cols-2 gap-x-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <payment-total></payment-total>
       <payment-total></payment-total>
     </div>
@@ -14,7 +14,7 @@
       <base-btn icon="heroicons:plus" primary @click="$router.push('/payment/add-field')">Add</base-btn>
     </div>
     
-    <div class="grid grid-cols-3 gap-x-8 mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
       <payment-card v-for="(field, index) in fields" :field="field" :value="50"></payment-card>
     </div>
 
@@ -23,7 +23,7 @@
       <base-subtitle>Regular</base-subtitle>
       <base-btn icon="heroicons:plus" primary @click="$router.push('/payment/add-amount')">Add</base-btn>
     </div>
-    <div class="grid mt-8">
+    <div class="mt-8">
         <payment-table :payments="payments"></payment-table>
     </div>
   </div>

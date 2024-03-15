@@ -19,7 +19,7 @@
         <div class="mt-4">
           <base-label>Amount</base-label>
 
-          <div class="flex flex-wrap gap-4 mt-2">
+          <div class="flex flex-wrap gap-2 mt-2">
             <base-select-btn
               v-for="option in paymentsOptions"
               :option="option"

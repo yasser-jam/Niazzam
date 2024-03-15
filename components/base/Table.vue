@@ -1,5 +1,5 @@
 <template>
-  <div class="card shadow-md bg-white rounded-md relative">
+  <div class="card shadow-md bg-white rounded-md relative overflow-auto">
     <div class="card-body px-4">
       <table class="table">
         <!-- head -->

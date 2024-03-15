@@ -13,7 +13,7 @@
         <base-btn primary>Monthly</base-btn>
       </div>
       
-      <div class="grid grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <goal-card color="primary"  :value="50"></goal-card>
         <goal-card color="info" :value="25"></goal-card>
         <goal-card color="warning" :value="75"></goal-card>

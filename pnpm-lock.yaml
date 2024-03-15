@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@nuxtjs/device':
+    specifier: ^3.1.1
+    version: 3.1.1
   '@nuxtjs/tailwindcss':
     specifier: ^6.10.4
     version: 6.10.4
@@ -46,6 +49,9 @@ devDependencies:
   daisy-ui-kit:
     specifier: ^3.0.11
     version: 3.0.11(@vueuse/core@10.9.0)(daisyui@3.9.4)(prismjs@1.29.0)(vue@3.4.14)
+  dayjs-nuxt:
+    specifier: ^2.1.9
+    version: 2.1.9
   nuxt:
     specifier: ^3.9.1
     version: 3.9.1(vite@5.0.11)
@@ -1182,6 +1188,16 @@ packages:
       - vti
       - vue-tsc
     dev: true
+
+  /@nuxtjs/device@3.1.1:
+    resolution: {integrity: sha512-wHTziEevt1hdgePQwPhEedWW3COalhP0YGVB+sGLqSrKujX8vdz7lcBFB01KIftpaP8kY5H8pssibNaJbxGcYw==}
+    dependencies:
+      '@nuxt/kit': 3.10.3
+      defu: 6.1.4
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
 
   /@nuxtjs/supabase@1.1.7:
     resolution: {integrity: sha512-A6nwAA3JjIxMyLvRqBowoALW3U5LVWHP6mK2oXdYsn7nDH0FH9Z3P0ZXr1ivS8RN5CPXkRAW9kuZE/iXuyFILg==}
@@ -2897,6 +2913,20 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.0
     dev: false
+
+  /dayjs-nuxt@2.1.9:
+    resolution: {integrity: sha512-7L1X8Wm+O2s2o+YK8RH1GK0SUUsh7l0lnIzsjaLGvyu64asLs2KVNoh25J4tQurdILp2TyrFaTo/k3k/ZPub9Q==}
+    dependencies:
+      '@nuxt/kit': 3.10.3
+      dayjs: 1.11.10
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
+    dev: true
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}

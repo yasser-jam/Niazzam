@@ -24,7 +24,7 @@
     </template>
 
     <template #date="{ item }">
-      <div class="badge badge-primary text-white p-4 text-base rounded-lg">
+      <div class="badge badge-primary text-white p-4 text-base min-w-32 rounded-lg whitespace-nowrap">
         {{ item.created_at }}
       </div>
     </template>

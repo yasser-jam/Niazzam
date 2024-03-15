@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "daisy-ui-kit/nuxt",
     "@nuxtjs/supabase",
-    "@pinia/nuxt"
+    "@pinia/nuxt",
+    "@nuxtjs/device",
   ],
 
   postcss: {
