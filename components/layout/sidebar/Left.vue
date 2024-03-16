@@ -1,12 +1,14 @@
 <template>
   <div class="relative w-full">
     <div class="bg-white flex flex-col items-center justify-around h-full fixed w-[7%]">
-      <Icon
-        name="heroicons:academic-cap"
-        color="#3F00E7"
-        class="w-[50px] h-[50px]"
-      />
-  
+      <nuxt-link to="/">
+        <Icon
+          name="heroicons:academic-cap"
+          color="#3F00E7"
+          class="w-[50px] h-[50px]"
+        />
+      </nuxt-link>
+      
       <div class="flex flex-col space-y-12">
         <nuxt-link v-for="link in links" :to="link.link">
           <base-btn
