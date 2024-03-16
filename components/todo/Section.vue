@@ -67,11 +67,8 @@
 
 <script>
 import draggable from "vuedraggable";
-let id = 1;
+
 export default {
-  name: "two-list-headerslots",
-  display: "Two list header slot",
-  order: 14,
   components: {
     draggable,
   },
@@ -91,20 +88,6 @@ export default {
         { name: "Guisepe 5", id: 4 },
       ],
     };
-  },
-  methods: {
-    add: function () {
-      this.list.push({ name: "Juan " + id, id: id++ });
-    },
-    replace: function () {
-      this.list = [{ name: "Edgard", id: id++ }];
-    },
-    add2: function () {
-      this.list2.push({ name: "Juan " + id, id: id++ });
-    },
-    replace2: function () {
-      this.list2 = [{ name: "Edgard", id: id++ }];
-    },
   },
 };
 </script>
