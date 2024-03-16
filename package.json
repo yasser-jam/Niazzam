@@ -7,11 +7,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate-pwa-assets": "pwa-assets-generator"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.64",
     "@nuxtjs/supabase": "^1.1.7",
+    "@vite-pwa/nuxt": "^0.6.0",
     "autoprefixer": "^10.4.16",
     "daisy-ui-kit": "^3.0.11",
     "dayjs-nuxt": "^2.1.9",
@@ -26,6 +28,7 @@
     "@nuxtjs/tailwindcss": "^6.10.4",
     "@pinia/nuxt": "^0.5.1",
     "@popperjs/core": "^2.11.8",
+    "@vite-pwa/assets-generator": "^0.2.4",
     "chart.js": "^4.4.2",
     "nuxt-icon-tw": "^0.1.3",
     "pinia": "^2.1.7",
