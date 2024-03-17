@@ -1,0 +1,1 @@
+import{_ as e,o,c as n,q as s}from"./entry.ynPI_HEa.js";const c={},r={class:"text-2xl font-bold text-primary"};function _(t,a){return o(),n("div",r,[s(t.$slots,"default")])}const d=e(c,[["render",_]]);export{d as _};
