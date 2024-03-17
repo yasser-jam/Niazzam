@@ -7,6 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "deploy": "nuxt generate && gh-pages --dotfiles -d .output/public",
     "postinstall": "nuxt prepare",
     "generate-pwa-assets": "pwa-assets-generator"
   },
@@ -17,6 +18,7 @@
     "autoprefixer": "^10.4.16",
     "daisy-ui-kit": "^3.0.11",
     "dayjs-nuxt": "^2.1.9",
+    "gh-pages": "^6.1.1",
     "nuxt": "^3.9.1",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
