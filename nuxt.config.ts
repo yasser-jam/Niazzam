@@ -4,10 +4,6 @@ const appDescription = "In Order To Order"
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  app: {
-    baseURL: ''
-  },
-
   css: ["~/assets/styles/main.scss"],
 
 
