@@ -8,6 +8,12 @@ export default defineNuxtConfig({
     port: 4040
   },
 
+  app: {
+    baseURL: '/nizzzam.github.io/',
+    buildAssetsDir: 'assets'
+  },
+  
+
   modules: ['@vite-pwa/nuxt'],
   ssr: false,
   pwa: {
