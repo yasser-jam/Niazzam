@@ -1,5 +1,5 @@
 <template>
     <div>
-        <slot />
+        hello test vue
     </div>
 </template>
