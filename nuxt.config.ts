@@ -17,8 +17,8 @@ export default defineNuxtConfig({
   modules: ['@vite-pwa/nuxt'],
   ssr: false,
   pwa: {
-    scope: '/nizzzam.github.io',
-    base: '/nizzzam.github.io',
+    scope: '/nizzzam.github.io/',
+    base: '/nizzzam.github.io/',
     injectRegister: 'auto',
     registerType: 'autoUpdate',
     manifest: {
@@ -84,9 +84,6 @@ export default defineNuxtConfig({
       navigateFallback: 'index.html',
       type: 'module',
     },
-  },
-  build: {
-    transpile: ['vuetify'],
   },
   runtimeConfig: {
     public: {
