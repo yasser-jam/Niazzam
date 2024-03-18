@@ -39,8 +39,8 @@ export default defineNuxtConfig({
   },
 
   pwa: {
-    scope: '/',
-    base: '/',
+    scope: '/nizzzam.github.io',
+    base: '/nizzzam.github.io',
     injectRegister: 'auto',
     registerType: 'autoUpdate',
     manifest: {
