@@ -17,8 +17,8 @@ export default defineNuxtConfig({
   modules: ['@vite-pwa/nuxt'],
   ssr: false,
   pwa: {
-    scope: '/',
-    base: '/',
+    scope: '/nizzzam.github.io',
+    base: '/nizzzam.github.io',
     injectRegister: 'auto',
     registerType: 'autoUpdate',
     manifest: {
