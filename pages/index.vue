@@ -1,15 +1,21 @@
 <template>
-    <div class="grid grid-cols-3 gap-4 mb-4">
-        <div class="w-full min-h-[300px]">
-            <base-chart class="min-h-full"></base-chart>
-        </div>
-        <div>
-            <base-chart></base-chart>
-        </div>
-        <div>
-            <base-chart></base-chart>
-        </div>
+
+<div class="grid grid-cols-2 mb-8">
+  <quote-card class="cols-span-2"></quote-card>
+
+</div>
+
+  <div class="grid grid-cols-3 gap-4 mb-4">
+    <div class="w-full min-h-[300px]">
+      <base-chart class="min-h-full"></base-chart>
     </div>
+    <div>
+      <base-chart></base-chart>
+    </div>
+    <div>
+      <base-chart></base-chart>
+    </div>
+  </div>
 
   <base-subtitle class="mt-8 mb-4">Tasks</base-subtitle>
   <div class="grid grid-cols-1">
