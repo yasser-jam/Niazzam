@@ -1,5 +1,5 @@
 <template>
-    <Bar id="my-chart-id" :options="chartOptions" :data="chartData" class="min-h-[300px]" />
+    <Bar :options="chartOptions" :data="chartData" />
 </template>
 
 <script>
@@ -39,6 +39,7 @@ export default {
       },
       chartOptions: {
         responsive: true,
+        maintainAspectRatio: false
       },
     };
   },
