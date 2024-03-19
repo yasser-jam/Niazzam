@@ -1,5 +1,17 @@
 <template>
-    <Bar :options="chartOptions" :data="chartData" />
+  <div class="card">
+    
+    <div class="card-body rounded-lg bg-white">
+      
+      <div class="card-title mb-4">Chart Name</div>
+
+      <div class="h-[250px]">
+
+        <Bar :options="chartOptions" :data="chartData" />
+      </div>
+    
+    </div>
+  </div>
 </template>
 
 <script>
@@ -38,7 +50,6 @@ export default {
         ],
       },
       chartOptions: {
-        responsive: true,
         maintainAspectRatio: false
       },
     };
