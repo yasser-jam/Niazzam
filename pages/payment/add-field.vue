@@ -7,7 +7,7 @@
 
         <div class="gird grid-cols-1">
 
-            <div class="">
+            <div class="s">
                 <base-label>Title</base-label>
 
                 <base-text-input v-model="field.title"></base-text-input>
@@ -15,7 +15,7 @@
 
             <div class="mt-4">
                 <base-label>Icon</base-label>
-                
+
                 <base-text-input v-model="field.icon"></base-text-input>
             </div>
 
