@@ -4,7 +4,7 @@
     open modal
   </button>
   <dialog id="modal" class="modal overflow-hidden">
-    <div class="modal-box px-4">
+    <div class="modal-box">
       
       <h3 class="font-bold text-xl pb-2">
         <slot name="title" />

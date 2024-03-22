@@ -6,10 +6,10 @@ module.exports = {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
           primary: "#5885A3",
+          neutral: '#CFE6FA',
           secondary: "#74A9F0",
           warning: '#FBBF0A',
           info: "#74A9F0",
-          neutral: '#5A5DA7',
           neutralContent: '#edf3ff'
         },
       }

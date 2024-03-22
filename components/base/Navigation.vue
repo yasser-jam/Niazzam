@@ -5,6 +5,7 @@
       :to="link.link"
       class="link relative decoration-transparent flex items-center gap-1 text-[#5981A6] text-lg font-semibold py-3 px-8 rounded-lg"
       :class="index == 0 && 'active'"
+      active-class="bg-primary text-neutral"
     >
       <Icon name="heroicons:link-20-solid" />
       <div>{{ link.title }}</div>
@@ -46,9 +47,12 @@ const links = ref([
   z-index: 20;
 }
 
+.link:hover {
+  color: #cfe6fa
+}
+
 .link:hover::after {
   width: 100%;
-  transition: all .25s
 }
 
 .link::after {
@@ -58,8 +62,10 @@ const links = ref([
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #d5ebf7bf;
+  background-color: #5885A3;
   border-radius: .5rem;
-  z-index: -1
+  z-index: -1;
+  transition: all .25s
+
 }
 </style>

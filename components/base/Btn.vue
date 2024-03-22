@@ -1,8 +1,13 @@
 <template>
-  <da-button active>
+  <button class="btn btn-outline btn-primary glass">
+    <Icon v-if="icon" class="text-2xl" :name="icon" />
+    <slot></slot>
+  </button>
+
+  <!-- <da-button active>
     <Icon v-if="icon" class="text-2xl" :name="icon" />
     <slot />
-  </da-button>
+  </da-button> -->
 </template>
 
 <script setup>

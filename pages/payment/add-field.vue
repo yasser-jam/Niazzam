@@ -10,13 +10,13 @@
             <div class="">
                 <base-label>Title</base-label>
 
-                <da-text-input v-model="field.title" bordered class="w-full"></da-text-input>
+                <base-text-input v-model="field.title"></base-text-input>
             </div>
 
             <div class="mt-4">
                 <base-label>Icon</base-label>
-
-                <da-text-input v-model="field.icon" bordered class="w-full"></da-text-input>
+                
+                <base-text-input v-model="field.icon"></base-text-input>
             </div>
 
         </div>

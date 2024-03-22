@@ -2,7 +2,7 @@
     <div class="card shadow-md bg-white rounded-xl relative">
         <div class="card-body">
 
-            <div class="flex items-center gap-x-6">
+            <div class="flex items-center gap-x-6 text-primary">
 
                 <div class="radial-progress text-xl" :style="`--value:${value};`" role="progressbar">{{ value }}%</div>
 

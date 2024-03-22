@@ -8,14 +8,16 @@
                     <div class="flex flex-col items-center">
                         <img src="~/assets/images/personal-avatar.jpg" alt="personal" width="100" height="100" class="rounded-full">
 
-                        <div class="text-[#5981A6] font-semibold text-xl mt-2">Yasser Jamal Al-Deen</div>
+                        <div class="text-primary font-semibold text-xl mt-2">Yasser Jamal Al-Deen</div>
                         <div class="text-gray-400 text-sm">Front End</div>
                     </div>
                     <base-navigation></base-navigation>
                 </div>
 
-                <div class="col-span-6 p-8">
-                    <slot />
+                <div class="col-span-6 p-8 overflow-auto">
+                    <div class="container">
+                        <slot />
+                    </div>
                 </div>
             </div>
         </main>
