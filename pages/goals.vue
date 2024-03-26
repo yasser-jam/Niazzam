@@ -8,16 +8,13 @@
       </div>
 
 
-      <div class="flex items-center justify-between mb-8">
+      <!-- <div class="flex items-center justify-between mb-8">
         <base-subtitle>Weekly Goals <base-badge>week-2</base-badge></base-subtitle>
         <base-btn primary>Monthly</base-btn>
-      </div>
+      </div> -->
       
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <goal-card color="primary"  :value="50"></goal-card>
-        <goal-card color="info" :value="25"></goal-card>
-        <goal-card color="warning" :value="75"></goal-card>
-        <goal-card class="bg-error" type="" :value="15"></goal-card>
+        <goal-card v-for="goal in goals" :goal="goal"></goal-card>
       </div>
 
       <div class="mt-8">
@@ -47,19 +44,27 @@
   </template>
   
   <script setup lang="ts">
+  definePageMeta({
+    layout: 'test'
+  })
+
   const goals = ref([
     {
       id: 1,
       title: 'Reading',
       currentState: 'Stage - 4',
       description: 'Syrian Improvments',
+      category: 'Learning',
+      progress: 50,
       level: 1
     },
     {
       id: 2,
-      title: 'Algorithms Course',
+      title: 'Algorithms',
       currentState: 'Stage - 3',
       description: 'Testing and Practicing',
+      category: 'Sport',
+      progress: 70,
       level: 2
     },
     {
@@ -67,6 +72,8 @@
       title: 'Memorizing',
       currentState: 'Poem 4',
       description: 'Ibn Zaidon',
+      category: 'Improvements',
+      progress: 20,
       level: 2
     },
     {
@@ -74,13 +81,8 @@
       title: 'Documentries',
       currentState: 'Docs 5',
       description: 'Apucalips 5',
-      level: 3
-    },
-    {
-      id: 5,
-      title: 'Study',
-      currentState: 'term 2',
-      description: 'term 2',
+      category: 'Work',
+      progress: 90,
       level: 3
     },
   ])
@@ -89,22 +91,26 @@
   const tasks = ref([
     {
       id: 1,
-      name: 'Task - 1',
+      name: '50 page from book',
+      goal: 'Reading',
       status: true
     },
     {
       id: 2,
-      name: 'Task - 2',
+      name: 'Work for 6 hours',
+      goal: 'Work',
       status: false
     },
     {
       id: 3,
-      name: 'Task - 3',
+      name: 'Attend two videos from Nest course',
+      goal: 'Learning',
       status: true
     },
     {
       id: 4,
-      name: 'Task - 4',
+      name: 'Attend two lectures in college',
+      goal: 'Improvements',
       status: false
     },
   ])

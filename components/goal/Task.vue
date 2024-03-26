@@ -1,20 +1,24 @@
 <template>
-  <da-label class="cursor-pointer bg-white rounded-md px-4 py-4">
-    <da-label-text class="text-lg font-bold">{{ props.task.name }}</da-label-text>
-    <!-- <da-checkbox primary size="2rem" class="text-3xl w-8" v-model="isChecked" lg/> -->
-    <input v-model="formattedValue" type="checkbox" :aria-label="props.task.status ? 'Done!' : 'Doning'" class="btn " />
-  </da-label>
+  <label class="flex items-center justify-between cursor-pointer bg-slate-100 rounded-md px-4 py-2">
+
+    <div class="label-text text-lg text-primary font-bold">{{ task.name }}</div>
+    
+    <base-badge>{{ task.goal }}</base-badge>
+
+    <input
+      v-model="task.status"
+      type="checkbox"
+      :aria-label="task.status ? 'Done!' : 'Doning'"
+      class="btn btn-md"
+    />
+  </label>
 </template>
 
 <script setup lang="ts">
-const isChecked = ref(false);
+const emit = defineEmits(["update:model-value"]);
 
 const props = defineProps<{
-    task: any
-}>()
+  task: any;
+}>();
 
-const formattedValue = computed({
-    get: () => props.task.status,
-    set: val => emit('update:moddel-value', val)
-})
 </script>
